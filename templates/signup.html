@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup Page</title>
+    <style>
+        body{
+            margin:0;
+            font-family:Arial,sans-serif;
+            background:url("{{ url_for('static', filename='background.jpg') }}") no-repeat center center/cover;
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+        }
+
+        .container{
+            background:rgba(255,255,255,0.9);
+            padding:30px;
+            border-radius:15px;
+            width:320px;
+            box-shadow:0 0 15px rgba(0,0,0,0.3);
+        }
+
+        h2{
+            text-align:center;
+            color:#333;
+        }
+
+        input{
+            width:100%;
+            padding:10px;
+            margin:10px 0;
+            border:1px solid #ccc;
+            border-radius:8px;
+            box-sizing:border-box;
+        }
+
+        button{
+            width:100%;
+            padding:10px;
+            background:#007BFF;
+            color:white;
+            border:none;
+            border-radius:8px;
+            cursor:pointer;
+            font-size:16px;
+        }
+
+        button:hover{
+            background:#0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Sign Up</h2>
+
+    <form method="POST">
+        <input type="text" name="name" placeholder="Full Name" required>
+
+        <input type="tel" name="phone" placeholder="Phone Number" required>
+
+        <input type="email" name="email" placeholder="Email" required>
+
+        <input type="password" name="password" placeholder="Password" required>
+
+        <input type="password" name="confirm_password" placeholder="Re-enter Password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+</div>
+
+</body>
+</html>
